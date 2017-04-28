@@ -31,7 +31,6 @@ namespace SimplexInterface
             Application.DoEvents();
             System.Threading.Thread.Sleep(100);
             mpProgress.Value = i;
-            //metroProgressSpinner1.PerformLayout();
          }
          this.Close(); 
       }
