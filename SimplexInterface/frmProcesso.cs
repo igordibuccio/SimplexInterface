@@ -16,20 +16,15 @@ namespace SimplexInterface
          InitializeComponent();
       }
 
-      private void frmProcesso_Load(object sender, EventArgs e)
-      {
-
-      }
-
       private void frmProcesso_Shown(object sender, EventArgs e)
       {
          mpProgress.Maximum = 100;
          mpProgress.Value = 0;
 
-         for (int i = 0; i < 10; i++)
+         for (int i = 0; i < 50; i++)
          {
             Application.DoEvents();
-            System.Threading.Thread.Sleep(100);
+            System.Threading.Thread.Sleep(100); // 1 Segundo.
             mpProgress.Value = i;
          }
          this.Close(); 

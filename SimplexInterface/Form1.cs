@@ -80,7 +80,8 @@ namespace SimplexInterface
       private void Form1_KeyPress(object sender, KeyPressEventArgs e)
       {
          //Valida se o que o usuário está digitando é um número.
-         if (!(e.KeyChar >= 48 && e.KeyChar <= 57) && (e.KeyChar != 45) && !(e.KeyChar == (char)Keys.Back) && !(e.KeyChar == (char)Keys.Enter) && !(e.KeyChar == (char)Keys.Tab) && !(e.KeyChar == (char)Keys.Escape))
+         if (!(e.KeyChar >= 48 && e.KeyChar <= 57) && (e.KeyChar != 45) && !(e.KeyChar == (char)Keys.Back) &&
+            !(e.KeyChar == (char)Keys.Enter) && !(e.KeyChar == (char)Keys.Tab) && !(e.KeyChar == (char)Keys.Escape) && (e.KeyChar !=46))
             e.Handled = true;
          else if (e.KeyChar == (char)Keys.Enter)
          {
@@ -217,7 +218,7 @@ namespace SimplexInterface
             StrJson += "\"resultado\":" + dgvSimplex.Rows[i].Cells[dgvSimplex.Columns.Count - 1].Value;
             StrJson += "}";
 
-            if (i != dgvSimplex.Columns.Count - 1)
+            if (i != dgvSimplex.Columns.Count - 2)
                StrJson += ",";
          }
          StrJson += "]}";
@@ -226,15 +227,20 @@ namespace SimplexInterface
       }
       public string EnviaJSON()
       {
+         //Cria o objeto para fazer requisição ao servidor.
          var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.207.22.117:8080/Simplex-1.0.0/simplex");
+
+         //Define o tipo de requisição
          httpWebRequest.ContentType = "application/json";
          httpWebRequest.Method = "POST";
 
+         //Envia os dados do JSON ao Servidor.
          using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
          {
             streamWriter.Write(CriaJSON());
          }
 
+         //Pega o Response retornado pelo Servidor.
          var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
          var result = "";
          using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
@@ -247,6 +253,7 @@ namespace SimplexInterface
 
       private void btCalcular_Click(object sender, EventArgs e)
       {
+         //Valida se os dados inseridos estão validos para realizar o calculo.
          if (!ValidaGrid())
          {
             MessageBox.Show("Dados insuficientes para realizar o calculo.", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -254,9 +261,11 @@ namespace SimplexInterface
          }
          else
          {
+            //Faz a requisição ao WS para o Calculo do Simplex.
             string ResultadoJson = "";
             ResultadoJson = EnviaJSON();
 
+            //Chama o form que irá exibir o resultado.
             frmResultado frm = new frmResultado(ResultadoJson);
             frm.ShowDialog();
             frm.Dispose();

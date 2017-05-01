@@ -211,7 +211,7 @@
          this.labelX1.BackgroundStyle.Class = "";
          this.labelX1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.labelX1.ForeColor = System.Drawing.Color.Black;
-         this.labelX1.Location = new System.Drawing.Point(30, 398);
+         this.labelX1.Location = new System.Drawing.Point(100, 398);
          this.labelX1.Name = "labelX1";
          this.labelX1.SingleLineColor = System.Drawing.SystemColors.ControlText;
          this.labelX1.Size = new System.Drawing.Size(218, 23);
@@ -227,7 +227,7 @@
          this.labelX2.BackgroundStyle.Class = "";
          this.labelX2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.labelX2.ForeColor = System.Drawing.Color.Black;
-         this.labelX2.Location = new System.Drawing.Point(254, 398);
+         this.labelX2.Location = new System.Drawing.Point(324, 398);
          this.labelX2.Name = "labelX2";
          this.labelX2.SingleLineColor = System.Drawing.SystemColors.ControlText;
          this.labelX2.Size = new System.Drawing.Size(304, 23);
@@ -243,7 +243,7 @@
          this.labelX3.BackgroundStyle.Class = "";
          this.labelX3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.labelX3.ForeColor = System.Drawing.Color.Black;
-         this.labelX3.Location = new System.Drawing.Point(554, 398);
+         this.labelX3.Location = new System.Drawing.Point(352, 418);
          this.labelX3.Name = "labelX3";
          this.labelX3.SingleLineColor = System.Drawing.SystemColors.ControlText;
          this.labelX3.Size = new System.Drawing.Size(148, 23);
@@ -259,7 +259,7 @@
          this.labelX4.BackgroundStyle.Class = "";
          this.labelX4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.labelX4.ForeColor = System.Drawing.Color.Black;
-         this.labelX4.Location = new System.Drawing.Point(30, 418);
+         this.labelX4.Location = new System.Drawing.Point(100, 418);
          this.labelX4.Name = "labelX4";
          this.labelX4.SingleLineColor = System.Drawing.SystemColors.ControlText;
          this.labelX4.Size = new System.Drawing.Size(246, 23);

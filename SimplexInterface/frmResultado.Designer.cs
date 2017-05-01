@@ -68,6 +68,7 @@
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(478, 295);
          this.Controls.Add(this.txtResultado);
+         this.KeyPreview = true;
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "frmResultado";
@@ -76,6 +77,7 @@
          this.Style = MetroFramework.MetroColorStyle.Black;
          this.Text = "Resultado Simplex";
          this.Load += new System.EventHandler(this.frmResultado_Load);
+         this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmResultado_KeyPress);
          this.ResumeLayout(false);
 
       }

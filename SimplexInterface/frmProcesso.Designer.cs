@@ -54,7 +54,6 @@
          this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
          this.Style = MetroFramework.MetroColorStyle.Black;
          this.Text = "Aguarde o fim do processo";
-         this.Load += new System.EventHandler(this.frmProcesso_Load);
          this.Shown += new System.EventHandler(this.frmProcesso_Shown);
          this.ResumeLayout(false);
 
