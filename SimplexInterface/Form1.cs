@@ -186,11 +186,13 @@ namespace SimplexInterface
          string StrJson = "";
          string TipoFO = "";
 
+         //Define se o Problema é de Minimização ou Maximização
          if (rbMax.Checked)
             TipoFO = "MAX";
          else if (rbMin.Checked)
             TipoFO = "MIN";
 
+         //Define os valores da Função objetiva
          StrJson = "{";
          StrJson += "\"tipoFuncaoObjetivo\":\"" + TipoFO + "\",";
          StrJson += "\"listaSentencasFuncaoObjetiva\":[";
@@ -202,6 +204,7 @@ namespace SimplexInterface
          }
          StrJson += "],";
 
+         //Define os valores das restrições
          StrJson += "\"listaDadosRestricoes\":[";
          for (int i = 1; i < dgvSimplex.Rows.Count - 1; i++)
          {
