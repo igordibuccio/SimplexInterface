@@ -1,16 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using System.Net;
-using System.Runtime.Serialization.Json;
-using System.Text;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SimplexInterface
 {
@@ -21,8 +13,6 @@ namespace SimplexInterface
       {
          InitializeComponent();
       }
-
-
       private void CriaGridSimplex()
       {
          // Cria as colunas (variáveis) de acordo o valor inserido pelo usuário.
@@ -44,9 +34,7 @@ namespace SimplexInterface
          cboGrid.Items.Add("MAIOR_IGUAL");
          cboGrid.Items.Add("MENOR");
          cboGrid.Items.Add("MENOR_IGUAL");
-
          dgvSimplex.Columns.Add(cboGrid);
-
 
          //Cria coluna para resultado da igualdade das restrições.
          DataGridViewTextBoxColumn cTxtResultado = new DataGridViewTextBoxColumn();
@@ -62,9 +50,10 @@ namespace SimplexInterface
          dgvSimplex.Enabled = true;
          txtQtVariaveis.Enabled = false;
          btIniciar.Enabled = false;
+         btIniciar.UseCustomBackColor = true;
+         btIniciar.BackColor = Color.Gainsboro;
          btCalcular.Enabled = true;
       }
-
       private void button1_Click(object sender, EventArgs e)
       {
          if (txtQtVariaveis.Text != "")
@@ -88,9 +77,6 @@ namespace SimplexInterface
             txtQtVariaveis.Focus();
          }
       }
-
-
-
       private void Form1_KeyPress(object sender, KeyPressEventArgs e)
       {
          //Valida se o que o usuário está digitando é um número.
@@ -113,23 +99,19 @@ namespace SimplexInterface
             }
          }
       }
-
-
       public void LimpaForm()
       {
-
          dgvSimplex.Columns.Clear();
          dgvSimplex.Rows.Clear();
-
          dgvSimplex.Enabled = false;
          txtQtVariaveis.Enabled = true;
          txtQtVariaveis.Clear();
          rbMax.Checked = true;
+         btIniciar.UseCustomBackColor = false;
+         //btIniciar.BackColor = Color.Gainsboro;
          btIniciar.Enabled = true;
          btCalcular.Enabled = false;
-
       }
-
       private void txtQtVariaveis_KeyPress(object sender, KeyPressEventArgs e)
       {
          //Valida se o que o usuário está digitando é um número.
@@ -141,19 +123,11 @@ namespace SimplexInterface
             SendKeys.Send(e.KeyChar.ToString());
          }
       }
-
-
       private void dgvSimplex_RowLeave(object sender, DataGridViewCellEventArgs e)
       {
          //Valida se o GRID tem linhas para realizar as validações.
          if (dgvSimplex.Rows.Count > 0)
          {
-            //Se a linha corrente que o usuário estiver é a indice 0 = linha da função objetiva, o sistema coloca ela de uma cor diferente.
-            if (dgvSimplex.CurrentRow.Index == 0)
-            {
-               dgvSimplex.CurrentRow.DefaultCellStyle.BackColor = Color.Red;
-            }
-
             //Tratamento para inserir o valor zero nas celulas que o usuário deixou em branco da nova linha inserida.
             if (dgvSimplex.Rows.Count - 1 != dgvSimplex.CurrentRow.Index)
             {
@@ -166,9 +140,16 @@ namespace SimplexInterface
                }
             }
 
+            //Se a linha corrente que o usuário estiver é a indice 0 = linha da função objetiva, o sistema coloca ela de uma cor diferente.
+            if (dgvSimplex.CurrentRow.Index == 0)
+            {
+               if (dgvSimplex.Rows[dgvSimplex.CurrentRow.Index].Cells[0].Value != null)
+               {
+                  dgvSimplex.CurrentRow.DefaultCellStyle.BackColor = Color.Red;
+               }
+            }         
          }
       }
-
       private void dgvSimplex_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
       {
          //Valida se os valores das celulas Igualdade e Resultado das RESTRIÇÕES foram informados.
@@ -209,9 +190,7 @@ namespace SimplexInterface
          else if (rbMin.Checked)
             TipoFO = "MIN";
 
-
          StrJson = "{";
-
          StrJson += "\"tipoFuncaoObjetivo\":\"" + TipoFO + "\",";
          StrJson += "\"listaSentencasFuncaoObjetiva\":[";
          for (int i = 0; i < dgvSimplex.Columns.Count - 2; i++)
@@ -245,7 +224,6 @@ namespace SimplexInterface
 
          return StrJson;
       }
-
       public string EnviaJSON()
       {
          var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://54.207.22.117:8080/Simplex-1.0.0/simplex");
@@ -276,11 +254,15 @@ namespace SimplexInterface
          }
          else
          {
-            frmProcesso frm = new frmProcesso();
+            string ResultadoJson = "";
+            ResultadoJson = EnviaJSON();
+
+            frmResultado frm = new frmResultado(ResultadoJson);
             frm.ShowDialog();
             frm.Dispose();
             frm = null;
-            MessageBox.Show(EnviaJSON(), "Result");
+
+            //MessageBox.Show(EnviaJSON(), "Result");
          }
       }
    }

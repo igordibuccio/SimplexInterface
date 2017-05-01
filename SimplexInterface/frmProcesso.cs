@@ -26,7 +26,7 @@ namespace SimplexInterface
          mpProgress.Maximum = 100;
          mpProgress.Value = 0;
 
-         for (int i = 0; i < 50; i++)
+         for (int i = 0; i < 10; i++)
          {
             Application.DoEvents();
             System.Threading.Thread.Sleep(100);
