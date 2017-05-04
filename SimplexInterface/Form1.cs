@@ -273,8 +273,6 @@ namespace SimplexInterface
             frm.ShowDialog();
             frm.Dispose();
             frm = null;
-
-            //MessageBox.Show(EnviaJSON(), "Result");
          }
       }
    }
