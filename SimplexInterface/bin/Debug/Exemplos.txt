@@ -1,0 +1,11 @@
+https://msdn.microsoft.com/pt-br/library/dd941696.aspx#item8_3
+
+https://msdn.microsoft.com/pt-br/library/jj819168.aspx
+
+http://www.portugal-a-programar.pt/forums/topic/61098-http-request-post-e-get/
+
+http://www.macoratti.net/16/11/c_webreq1.htm
+
+https://imasters.com.br/linguagens/c-sharp/c-fazendo-requisicoes-simples-na-web/?trace=1519021197&source=single
+
+https://msdn.microsoft.com/pt-br/library/debx8sh9(v=vs.110).aspx

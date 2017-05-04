@@ -1,0 +1,38 @@
+C:\Users\Igor Damasceno\AppData\Local\Temporary Projects\SimplexInterface\bin\Debug\SimplexInterface.exe.config
+D:\Dados\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.exe.config
+D:\Dados\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.exe
+D:\Dados\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.pdb
+D:\Dados\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.csprojResolveAssemblyReference.cache
+D:\Dados\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.Form1.resources
+D:\Dados\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.Properties.Resources.resources
+D:\Dados\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.csproj.GenerateResource.Cache
+D:\Dados\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.exe
+D:\Dados\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.pdb
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.exe.config
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.exe
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.pdb
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.csprojResolveAssemblyReference.cache
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.Form1.resources
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.Properties.Resources.resources
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.csproj.GenerateResource.Cache
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.exe
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.pdb
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\bin\Debug\MetroFramework.Design.dll
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\bin\Debug\MetroFramework.dll
+D:\Projetos\Igor - Fontes\SimplexInterface\SimplexInterface\bin\Debug\MetroFramework.Fonts.dll
+D:\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.exe.config
+D:\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.exe
+D:\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.pdb
+D:\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.exe
+D:\SimplexInterface\SimplexInterface\bin\Debug\SimplexInterface.pdb
+D:\SimplexInterface\SimplexInterface\bin\Debug\DevComponents.DotNetBar2.dll
+D:\SimplexInterface\SimplexInterface\bin\Debug\MetroFramework.Design.dll
+D:\SimplexInterface\SimplexInterface\bin\Debug\MetroFramework.dll
+D:\SimplexInterface\SimplexInterface\bin\Debug\MetroFramework.Fonts.dll
+D:\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.Form1.resources
+D:\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.Properties.Resources.resources
+D:\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.csproj.GenerateResource.Cache
+D:\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.frmProcesso.resources
+D:\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.frmResultado.resources
+D:\SimplexInterface\SimplexInterface\obj\Debug\SimplexInterface.csprojResolveAssemblyReference.cache
