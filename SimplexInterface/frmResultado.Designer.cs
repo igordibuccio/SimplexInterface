@@ -51,6 +51,7 @@
          this.txtResultado.Multiline = true;
          this.txtResultado.Name = "txtResultado";
          this.txtResultado.PasswordChar = '\0';
+         this.txtResultado.ReadOnly = true;
          this.txtResultado.ScrollBars = System.Windows.Forms.ScrollBars.None;
          this.txtResultado.SelectedText = "";
          this.txtResultado.SelectionLength = 0;
