@@ -90,7 +90,7 @@ namespace SimplexInterface
          }
          else if (e.KeyChar == (char)Keys.Escape)
          {
-            if (dgvSimplex.Rows.Count > 0)
+            if (dgvSimplex.Rows.Count > 0  && MessageBox.Show("Deseja abandonar os dados ?", "Interface Simplex", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                LimpaForm();
             }
@@ -221,7 +221,7 @@ namespace SimplexInterface
             StrJson += "\"resultado\":" + dgvSimplex.Rows[i].Cells[dgvSimplex.Columns.Count - 1].Value;
             StrJson += "}";
 
-            if (i != dgvSimplex.Columns.Count - 2)
+            if (i != dgvSimplex.Rows.Count - 2)
                StrJson += ",";
          }
          StrJson += "]}";
